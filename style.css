@@ -15,7 +15,28 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--light);
+  --background-color: var(--light);
+  --text-color: var(--dark);
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --background-color: var(--dark);
+    --text-color: var(--light);
+  }
+}
+
+.cat-ispom {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .cat-ispom {
+    display: block;
+  }
 }
 
 img {
@@ -43,6 +64,34 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 .card {
